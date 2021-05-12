@@ -22,7 +22,7 @@ namespace Azure_lab4
 
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             dynamic dataBody = JsonConvert.DeserializeObject(requestBody);
-            temperature_air = dataBody?.data;
+            temperature_air = dataBody?.temperature_air;
 
             if (temperature_air != -10000)
             {
